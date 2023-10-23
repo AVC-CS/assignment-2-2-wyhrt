@@ -7,7 +7,7 @@ import re
 def test_main_1():
     captureOut = io.StringIO()
     sys.stdout = captureOut
-    datastr = '23'
+    datastr = 'c \n 23'
     sys.stdin = io.StringIO(datastr)
 
     c, f = main.main()
@@ -28,7 +28,7 @@ def test_main_1():
 def test_main_2():
     captureOut = io.StringIO()
     sys.stdout = captureOut
-    datastr = '35'
+    datastr = 'c\n35'
     sys.stdin = io.StringIO(datastr)
 
     c, f = main.main()
