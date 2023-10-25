@@ -6,19 +6,22 @@ def main():
     ##################################################
     """
     while True:
-        conversion_type = input("Which unit is your input temprature in? (C/F): " )
+        try:
+            conversion_type = input("Which unit is your input temprature in? (C/F): " )
+        except EOFError:
+           break
 
         if conversion_type == "c" or conversion_type == "C":
-         celsius = int(input("Input your celsius Temperature: "))
+         celsius = float(input("Input your celsius Temperature: "))
          fahrenheit = celsius * 1.8 + 32
-         print("Conversion output: %i°F" % fahrenheit)
+         print("%i °C = %i °F" % fahrenheit)
          return celsius, fahrenheit
          exit
 
         if conversion_type == "f" or conversion_type == "F":
-         fahrenheit = int(input("Input your fahrenheit Temperature: "))
+         fahrenheit = float(input("Input your fahrenheit Temperature: "))
          celsius = (fahrenheit - 32) * 5/9
-         print("Comversion output: %i °C" % celsius) 
+         print("%i °F =  %i °C" %(fahrenheit,celsius)) 
          return celsius, fahrenheit
          exit
 
@@ -32,7 +35,8 @@ def main():
     # Do not delete the return statement
     ########################################
     """
-    return celsius, fahrenheit
+
+    ## return celsius, fahrenheit
 
 
 if __name__ == '__main__':
