@@ -14,7 +14,7 @@ def main():
         if conversion_type == "c" or conversion_type == "C":
          celsius = float(input("Input your celsius Temperature: "))
          fahrenheit = celsius * 1.8 + 32
-         print("%i °C = %i °F" % fahrenheit)
+         print("%i °C = %i °F" %(celsius,fahrenheit))
          return celsius, fahrenheit
          exit
 
